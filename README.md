@@ -4,7 +4,7 @@
 
 <img src="https://user-images.githubusercontent.com/40736396/101441535-ab617f00-395c-11eb-98a2-9cbe78fcf078.png" width="100%" height="60%"> 
 
-https://youtu.be/_JTMdI2pfQs
+#### Watching Full video about this robot : https://youtu.be/_JTMdI2pfQs
 
 ## 2. Hardware
 ### (1) Prototype
