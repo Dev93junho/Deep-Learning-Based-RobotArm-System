@@ -18,7 +18,7 @@
 ### (3) Image Processing
 ### (4) Trajectory Planning
 
-### Reference
+## Reference
 A Study on Deep Learning Based RobotArm System 
 
 
