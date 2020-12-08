@@ -1,7 +1,7 @@
 # Kitchen Master
 ## Overview
-![background](https://user-images.githubusercontent.com/40736396/101233429-3132bf80-36fc-11eb-9cfa-3a7c349dacd3.PNG){: width="150", height="90"}
-![Usecase1](https://user-images.githubusercontent.com/40736396/101441535-ab617f00-395c-11eb-98a2-9cbe78fcf078.png){: width="150", height="90"}
+![background](https://user-images.githubusercontent.com/40736396/101233429-3132bf80-36fc-11eb-9cfa-3a7c349dacd3.PNG){: width="150" height="90"}
+![Usecase1](https://user-images.githubusercontent.com/40736396/101441535-ab617f00-395c-11eb-98a2-9cbe78fcf078.png){: width="150" height="90"}
 
 ## Hardware
 ![asm1](https://user-images.githubusercontent.com/40736396/101233164-f6c82300-36f9-11eb-8356-d753e0464854.png)
