@@ -1,0 +1,495 @@
+<?xml version="1.0"?>
+<robot name="han2um_test">
+
+    <link name="world"/>
+
+<!--base_link1-->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.01" radius="0.2"/>
+            </geometry>
+            <material name="silver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0 0 0.005"/>
+        </visual>
+	<collision>
+		<geometry>
+           	     <cylinder length="0.01" radius="0.2"/>
+           	</geometry>
+		<origin rpy="0 0 0" xyz="0 0 0.005"/>
+	</collision>
+	<inertial>
+		<mass value="0.1"/>
+		<origin rpy="0 0 0" xyz="0 0 0.005"/>
+		<inertia ixx="0.0027" iyy="0.0027" izz="0.005" ixy="0" ixz="0" iyz="0"/>
+	</inertial>
+    </link>
+<!--base joint1-->
+    <joint name="base" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+	<origin rpy="0 0 0" xyz="0 0 0.6"/>
+    </joint>
+
+
+<!--base_link2-->
+    <link name="base_link2">
+        <visual>
+            <geometry>
+                <cylinder length="0.09" radius="0.1"/>
+            </geometry>
+            <material name="silver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+	
+            <origin rpy="0 0 0" xyz="0 0 0.051"/>
+        </visual>
+	<collision>
+		<geometry>
+           	     <cylinder length="0.09" radius="0.1"/>
+           	</geometry>
+		<origin rpy="0 0 0" xyz="0 0 0.051"/>
+	</collision>
+	<inertial>
+		<mass value="0.1"/>
+        	<origin rpy="0 0 0" xyz="0 0 0.051"/>
+		<inertia ixx="0.0027" iyy="0.0027" izz="0.005" ixy="0" ixz="0" iyz="0"/>
+	</inertial>
+
+    </link>
+<!--base joint2-->
+    <joint name="base2" type="revolute">
+	<axis xyz="0 0 1"/>
+        <parent link="base_link"/>
+        <child link="base_link2"/>
+	<origin rpy="0 0 0" xyz="0 0 0"/>
+	<limit effort="300" velocity="0.1" lower="-3.14" upper="3.14"/>
+    </joint>
+
+<transmission name="joint2_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="base2">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="base_motor2">
+     <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+<!--link1 link-->
+	<link name="link1">
+		<visual>
+			<geometry>
+				<cylinder length="0.25" radius="0.05"/>
+			</geometry>
+			<material name="blue">
+				<color rgba="0.1 0.1 0.6 1"/>
+			</material>
+			<origin rpy="0 0 0" xyz="0 0 0.125"/>
+		</visual>
+	<collision>
+			<geometry>
+				<cylinder length="0.25" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0.125"/>
+	</collision>
+	<inertial>
+		<mass value="0.1"/>
+		<origin rpy="0 0 0" xyz="0 0 0.125"/>
+		<inertia ixx="0.0027" iyy="0.0027" izz="0.005" ixy="0" ixz="0" iyz="0"/>
+	</inertial>
+	</link>
+<!--link1 joint-->
+	<joint name="link1_joint" type="revolute">
+		<axis xyz="1 0 0"/>
+		<parent link="base_link2"/>
+		<child link="link1"/>
+		<origin rpy="-1.57 0 0" xyz="0 0 0.1"/>
+		<limit effort="300" velocity="0.1" lower="0" upper="3.14"/>
+	</joint>
+<transmission name="joint3_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="link1_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="base_motor3">
+     <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+
+<!--link2 link-->
+	<link name="link2">
+		<visual>
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<material name="red">
+				<color rgba="0.6 0.1 0.1 1"/>
+			</material>
+			<origin rpy="0 0 0" xyz="0 0 0.1"/>
+		</visual>
+	<collision>
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0.1"/>
+	</collision>
+	<inertial>
+		<mass value="0.1"/>
+		<origin rpy="0 0 0" xyz="0 0 0.1"/>
+		<inertia ixx="0.0027" iyy="0.0027" izz="0.005" ixy="0" ixz="0" iyz="0"/>
+	</inertial>
+	</link>
+<!--link2 joint-->
+	<joint name="link2_joint" type="revolute">
+		<axis xyz="1 0 0"/>
+		<parent link="link1"/>
+		<child link="link2"/>
+		<origin rpy="0 0 -3.14" xyz="0 0 0.25"/>
+		<limit effort="300" velocity="0.1" lower="-1.57" upper="3.14"/>
+	</joint>
+<transmission name="joint4_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="link2_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="base_motor4">
+     <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+<!--link3 link-->
+	<link name="link3">
+		<visual>
+			<geometry>
+				<cylinder length="0.05" radius="0.05"/>
+			</geometry>
+			<material name="green">
+				<color rgba="0.1 0.6 0.1 1"/>
+			</material>
+			<origin rpy="0 0 0" xyz="0 0 0.025"/>
+		</visual>
+	<collision>
+			<geometry>
+				<cylinder length="0.05" radius="0.05"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0.025"/>
+	</collision>
+		<inertial>
+		<mass value="0.1"/>
+		<origin rpy="0 0 0" xyz="0 0 0.025"/>
+		<inertia ixx="0.0027" iyy="0.0027" izz="0.005" ixy="0" ixz="0" iyz="0"/>
+	</inertial>
+	</link>
+
+<!--link3 joint-->
+	<joint name="link3_joint" type="revolute">
+		<axis xyz="1 0 0"/>
+		<parent link="link2"/>
+		<child link="link3"/>
+		<origin rpy="0 0 0" xyz="0 0 0.2"/>
+		<limit effort="300" velocity="0.1" lower="-1.57" upper="3.14"/>
+	</joint>
+
+<transmission name="joint5_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="link3_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="base_motor5">
+     <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+
+<!--camera sensor-->
+<!--
+  <link name="camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+       <cylinder length="0.01" radius="0.02"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-0.05 0  -0.05" rpy="1.57 0 0"/>
+      <geometry>
+       <cylinder length="0.01" radius="0.02"/>
+      </geometry>
+	<material name="green">
+		<color rgba="0.1 0.6 0.1 1"/>
+	</material>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="1 0 0" />
+      <origin xyz="0 0 0.05" rpy="3.925 -1.57 1.57"/>
+    <parent link="link3"/>
+    <child link="camera_link"/>
+  </joint>
+
+-->
+<!--
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>400</width>
+          <height>400</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>-->
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+<!--
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>rrbot/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+
+    </sensor>
+  </gazebo>
+-->
+<gazebo>
+	<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+	<plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+		<jointName> base2, link1_joint, link2_joint, link3_joint</jointName>
+	</plugin>
+</gazebo>
+
+ <!-- Define RGB-D sensor -->
+  <!-- frames in the center of the camera -->
+  <joint name="rgbd_camera_joint" type="fixed">
+    <origin rpy="0 0 -1.57" xyz="0 0 0.05"/><!---3.14 binggle z axis  -1.57 in or out 1.57-->
+    <parent link="link3"/>
+    <child link="rgbd_camera_link"/>
+  </joint>
+  <link name="rgbd_camera_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00936000000 -0.00003000000 -0.00273000000"/>
+      <mass value="0.21970000000"/>
+      <inertia ixx="0.00000429247" ixy="0.00000000000" ixz="0.00000002565" iyy="0.00000008027" iyz="0.00000000000" izz="0.00000427339"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://realsense2_description/meshes/d435.dae"/>
+      </geometry>
+      <material name="DarkGrey"/>
+    </visual>
+  </link>
+  <joint name="rgbd_camera_optical_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="rgbd_camera_link"/>
+    <child link="rgbd_camera_optical_frame"/>
+  </joint>
+  <link name="rgbd_camera_optical_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <!-- Depth sensor frames --> <!--test-->
+  <joint name="rgbd_camera_depth_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0.049 0.0"/>
+    <parent link="rgbd_camera_link"/>
+    <child link="rgbd_camera_depth_frame"/>
+  </joint>
+  <link name="rgbd_camera_depth_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <joint name="rgbd_camera_depth_optical_joint" type="fixed">
+    <origin rpy="0 0.0 0" xyz="0 0 0"/>
+    <parent link="rgbd_camera_depth_frame"/>
+    <child link="rgbd_camera_depth_optical_frame"/>
+  </joint>
+  <link name="rgbd_camera_depth_optical_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <!-- RGB sensor frames -->
+  <joint name="rgbd_camera_rgb_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0.022 0.0"/>
+    <parent link="rgbd_camera_link"/>
+    <child link="rgbd_camera_rgb_frame"/>
+  </joint>
+  <link name="rgbd_camera_rgb_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <joint name="rgbd_camera_rgb_optical_joint" type="fixed">
+    <origin rpy="-0 0.0 0" xyz="0 0 0"/>
+    <parent link="rgbd_camera_rgb_frame"/>
+    <child link="rgbd_camera_rgb_optical_frame"/>
+  </joint>
+  <link name="rgbd_camera_rgb_optical_frame">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <gazebo reference="rgbd_camera_link">
+    <!-- Depth (IR) -->
+    <sensor name="rgbd_camera_frame_sensor" type="depth">
+      <always_on>true</always_on>
+      <update_rate>6.0</update_rate>
+      <camera>
+        <horizontal_fov>1.01229096616</horizontal_fov>
+        <image>
+          <format>R8G8B8</format>
+          <width>640</width>
+          <height>480</height>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>4.0</far>
+        </clip>
+      </camera>
+      <plugin filename="libgazebo_ros_openni_kinect.so" name="rgbd_camera_frame_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>6.0</updateRate>
+        <cameraName>rgbd_camera</cameraName>
+        <imageTopicName>ir/image_raw</imageTopicName>
+        <cameraInfoTopicName>ir/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>depth/image_raw</depthImageTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <pointCloudTopicName>depth/points</pointCloudTopicName>
+        <frameName>rgbd_camera_optical_frame</frameName>
+        <pointCloudCutoff>0.05</pointCloudCutoff>
+        <pointCloudCutoffMax>5</pointCloudCutoffMax>
+        <rangeMax>4.0</rangeMax>
+        <!-- Distortion parameters not supported in gazebo 1.9.* plugins -->
+        <!--distortionK1>0.00000001</distortionK1>
+          <distortionK2>0.00000001</distortionK2>
+          <distortionK3>0.00000001</distortionK3>
+          <distortionT1>0.00000001</distortionT1>
+          <distortionT2>0.00000001</distortionT2-->
+      </plugin>
+    </sensor>
+    <!-- RGB -->
+    <sensor name="rgbd_camera_frame_sensor" type="depth">
+      <always_on>true</always_on>
+      <update_rate>6.0</update_rate>
+      <camera>
+        <horizontal_fov>1.01229096616</horizontal_fov>
+        <image>
+          <format>R8G8B8</format>
+          <width>640</width>
+          <height>480</height>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>4.0</far>
+        </clip>
+      </camera>
+      <plugin filename="libgazebo_ros_openni_kinect.so" name="rgbd_camera_frame_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>6.0</updateRate>
+        <cameraName>rgbd_camera</cameraName>
+        <imageTopicName>rgb/image_raw</imageTopicName>
+        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+        <pointCloudTopicName>rgb/points</pointCloudTopicName>
+        <depthImageTopicName>depth/image_raw</depthImageTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <frameName>rgbd_camera_optical_frame</frameName>
+        <pointCloudCutoff>0.05</pointCloudCutoff>
+        <pointCloudCutoffMax>5</pointCloudCutoffMax>
+        <rangeMax>4.0</rangeMax>
+      </plugin>
+    </sensor>
+  </gazebo>
+<!--imu sensor-->
+
+  <joint name="imu_joint" type="fixed">
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0 0"/>
+    <parent link="rgbd_camera_link"/>
+    <child link="imu_link"/>
+</joint>
+  <link name="imu_link">
+    <inertial>
+      <mass value="0.001"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001"/>
+      </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size=".001 .001 .001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0.27 0.65 0.27</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+</robot>
+

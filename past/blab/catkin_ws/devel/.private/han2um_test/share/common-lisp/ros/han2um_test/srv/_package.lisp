@@ -1,0 +1,15 @@
+(cl:defpackage han2um_test-srv
+  (:use )
+  (:export
+   "JOINTSTATE"
+   "<JOINTSTATE-REQUEST>"
+   "JOINTSTATE-REQUEST"
+   "<JOINTSTATE-RESPONSE>"
+   "JOINTSTATE-RESPONSE"
+   "PATH_MOVE"
+   "<PATH_MOVE-REQUEST>"
+   "PATH_MOVE-REQUEST"
+   "<PATH_MOVE-RESPONSE>"
+   "PATH_MOVE-RESPONSE"
+  ))
+

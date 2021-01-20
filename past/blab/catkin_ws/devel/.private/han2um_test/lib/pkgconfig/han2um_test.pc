@@ -1,0 +1,8 @@
+prefix=/home/james/catkin_ws/devel/.private/han2um_test
+
+Name: han2um_test
+Description: Description of han2um_test
+Version: 0.0.0
+Cflags: -I/home/james/catkin_ws/devel/.private/han2um_test/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy rviz tf urdf xacro
