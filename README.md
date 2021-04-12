@@ -16,7 +16,8 @@
 
 ## 3. Algorithm
 ### (1) System Overview
-<img src="D://Blab/KitchenMaster/readmeData/systemoverview.png" width="50%" height="30%>
+<img src="D:\Blab\KitchenMaster\readmeData\systemoverview.png" width="50%" height="30%">
+
 ### (2) Intent Classifier
 ### (3) Image Processing
 ### (4) Trajectory Planning
