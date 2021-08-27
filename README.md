@@ -19,11 +19,12 @@
 ### (4) Trajectory Planning
 
 
-<p>[본 프로젝트는 과학기술정보통신부 정보통신창의인재양성사업의 지원을 통해 수행한 ICT멘토링 프로젝트 결과물입니다]</p>
-
+<font size="1">본 프로젝트는 과학기술정보통신부 정보통신창의인재양성사업의 지원을 통해 수행한 ICT멘토링 프로젝트 결과물입니다</font>
 ## Reference
 
-> A Study on Deep Learning Based RobotArm System 
+> A Study on Deep Learning Based RobotArm System : go to paper [Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf)
+
+# Kitchen Master2
 
 
 
