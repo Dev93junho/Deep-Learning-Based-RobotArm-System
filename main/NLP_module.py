@@ -115,7 +115,7 @@ for step in range(STEP):
 index2class = {v:k for k,v in class2index.items()}
 
 for test in test_data:
-    X = kor_tagger.morphs(test[0])
+    X = kor_tagger.nouns(test[0])
     X = Variable(make_BoW(X,word2index)).view(1,-1)
     
     pred = model(X)
