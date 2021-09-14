@@ -1,4 +1,7 @@
-# Kitchen Master1
+# Kitchen Master ver.1
+<details>
+<summary>ver1 details</summary>
+
 ## 1. Overview
 <img src="https://user-images.githubusercontent.com/40736396/101441535-ab617f00-395c-11eb-98a2-9cbe78fcf078.png" width="100%" height="60%"> 
 
@@ -31,10 +34,15 @@
 ## Reference
 
 > A Study on Deep Learning Based RobotArm System 
-go to paper [Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf)
+> go to paper [Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf)
 
-# Kitchen Master2
+</details>
 
+# Kitchen Master ver.2
+<details>
+<summary>ver2 details</summary>
+
+</details>
 
 
 
