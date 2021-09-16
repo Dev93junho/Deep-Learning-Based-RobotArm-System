@@ -1,8 +1,0 @@
-prefix=/home/james/catkin_ws/devel/.private/yolov3_pytorch_ros
-
-Name: yolov3_pytorch_ros
-Description: Description of yolov3_pytorch_ros
-Version: 0.1.0
-Cflags: -I/home/james/catkin_ws/devel/.private/yolov3_pytorch_ros/include
-Libs: -L${prefix}/lib 
-Requires: 
