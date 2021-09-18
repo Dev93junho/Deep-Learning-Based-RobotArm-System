@@ -1,8 +1,11 @@
 # Kitchen Master
+- Initial project released on May.2020
+- Second version released on Sep.2021 
+
+<details>
+<summary>Old version desc</summary>
 
 ## Kitchen Master ver.1
-<details>
-<summary>ver1 details</summary>
 
 ## 1. Overview
 <p align="center"><img src="https://user-images.githubusercontent.com/40736396/101441535-ab617f00-395c-11eb-98a2-9cbe78fcf078.png" width="70%" height="45%" alt="Rendering"></p>
@@ -33,15 +36,28 @@
 ## Reference
 
 > A Study on Deep Learning Based RobotArm System 
+
 > go to paper [Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf)
 
 </details>
 
 ## Kitchen Master ver.2
-<details>
-<summary>ver2 details</summary>
 
-</details>
+## 1. Description
+This project is implement for Home-Kitchen Automation.
+
+## 2. Configuration
+#### Robot rail
+
+#### Robot body
+
+#### Back-End architecture
+
+#### Management App 
+
+## Contributors
+- version 1 Contributors : Junho Shin, Kyusuk Shim
+- version 2 Contributors : Junho Shin, EngHo Shin
 
 
 
