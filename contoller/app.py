@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello Kitchen Master"
+    return ('index.html')
 
 # Login function
 # If User isn't join this controller, go to join function
