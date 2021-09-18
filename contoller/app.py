@@ -3,14 +3,14 @@ This app is contoller for Kitchen Master2
 Written by Junho Shin, 09-2021
 """
 
-from flask import Flask, render_templates
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return ('index.html')
+    return render_template('index.html')
 
 # Login function
 # If User isn't join this controller, go to join function
