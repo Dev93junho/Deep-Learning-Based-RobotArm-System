@@ -55,6 +55,11 @@ This project is implement for Home-Kitchen Automation.
 
 #### Management App 
 
+#### Utility
+- KinematicSim
+Verification of the kinematical principle of the robotics model
+
+
 ## Contributors
 - version 1 Contributors : Junho Shin, Kyusuk Shim
 - version 2 Contributors : Junho Shin, EngHo Shin
