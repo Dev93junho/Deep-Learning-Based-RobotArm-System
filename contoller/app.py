@@ -24,8 +24,9 @@ def login():
 def join():
     pass
 
-
-
+@app.route('/control')
+def control():
+    pass
 
 
 if __name__ == '__main__':
