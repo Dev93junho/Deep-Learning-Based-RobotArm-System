@@ -1,7 +1,0 @@
-arm_controller:
-  type: "position_controllers/JointTrajectoryController"
-  joints:
-    - base2
-    - link1_joint
-    - link2_joint
-    - link3_joint
