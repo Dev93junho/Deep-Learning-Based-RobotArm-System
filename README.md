@@ -1,6 +1,6 @@
 # Kitchen Master
 - Initial project released on May.2020
-- Go to [Upgrede version] repository(https://github.com/MinTpie30/RobotIntheKitchen) 
+- Go to [Upgrede version](https://github.com/MinTpie30/RobotIntheKitchen) repository 
 ## Kitchen Master
 
 ## 1. Description
