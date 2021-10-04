@@ -1,6 +1,5 @@
 # Kitchen Master
 - Initial project released on May.2020
-- Second version development in progress 
 
 ## Kitchen Master
 
