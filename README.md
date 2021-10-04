@@ -35,8 +35,7 @@ desc
 <p align="center"><img src="./readmeData/octomapping.png" width="70%" height="45%" alt="result1"></p>
 <p align="center"><img src="./readmeData/mapping data.png" width="70%" height="45%" alt="result2"></p>
 
-<p> A Study on Deep Learning Based RobotArm System </p> 
-[Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf) 
+A Study on Deep Learning Based RobotArm System [Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf) 
 
 
 ## Contributors
