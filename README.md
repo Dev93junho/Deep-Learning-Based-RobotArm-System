@@ -32,7 +32,7 @@ desc
 <p align="center"><img src="./readmeData/Trajectory_test.png" width="70%" height="45%" alt="planning"></p>
 
 ### Result
-<p align="center"><img src="./readmeData/octomapping.png" width="50%" height="30%" alt="result1"><img src="./readmeData/mapping data.png" width="50%" height="30%" alt="result2"></p>
+<p align="center"><img src="./readmeData/octomapping.png" width="50%" height="30%" alt="result1"><img src="./readmeData/mapping data.png" width="50%" height="25%" alt="result2"></p>
 
 
 A Study on Deep Learning Based RobotArm System [Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf) 
