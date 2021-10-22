@@ -26,10 +26,8 @@ desc
 <p align="center"><img src="./readmeData/yolo-tiny test.png" width="70%" alt="yolo"></p>
 
 ### (4) Trajectory Planning
-<p align="center"><img src="./readmeData/Trajectory_test.png" width="70%" alt="planning"></p>
 
-### Result
-
+## 3. Result
 <p align="center"><img src="./readmeData/Trajectory_test.png" width="70%" alt="result0"></p>
 <p align="center"><img src="./readmeData/octomapping.png" width="40%" height="20%" alt="result1"><img src="./readmeData/mapping data.png" width="30%" height="35%" alt="result2"></p>
 <p width="70%"> - Depth image의 Point Cloud를 활용하여 로봇암의 주변 지도 정보를 얻어 장애물 및 주변 상황을 실시간으로 파악할 수 있다. 또한 물체와의 거리값을 파악하여 로봇암이 움직일수 있는 거리를 파악하였다.</span></p>
@@ -39,7 +37,7 @@ desc
 #### A Study on Deep Learning Based RobotArm System [Link](https://manuscriptlink-society-file.s3-ap-northeast-1.amazonaws.com/kips/conference/2020fall/presentation/KIPS_C2020B0162.pdf) 
 
 
-## Contributors
+### Contributors
 - Contributors : Junho Shin, Kyusuk Shim
 
 
