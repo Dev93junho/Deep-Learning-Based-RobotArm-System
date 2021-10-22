@@ -1,7 +1,6 @@
 # Kitchen Master
 - Initial project released on May.2020
 - Go to [Upgrede version](https://github.com/MinTpie30/RobotIntheKitchen) repository 
-## Kitchen Master
 
 ## 1. Description
 This project is implement for Home-Kitchen Automation.
@@ -13,8 +12,6 @@ This project is implement for Home-Kitchen Automation.
 ## 2. Configuration
 
 ### (1) Prototype
-
-#### Robot body
 
 #### System architecture
 <p align="center"><img src="./readmeData/systemoverview.png" width="70%" alt="system"></p>
