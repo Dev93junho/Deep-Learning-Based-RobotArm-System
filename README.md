@@ -1,4 +1,4 @@
-# Kitchen Master
+# Deep Learning Based RobotArm System
 - Initial project released on May.2020
 - Go to [Upgrede version](https://github.com/MinTpie30/RobotIntheKitchen) repository 
 
